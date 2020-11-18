@@ -1,0 +1,26 @@
+<div class="card card-body">
+    <h4><b>Title : </b>{{product.productName}}</h4>
+    <br>
+    <p><b>Category :</b>{{product.category}}</p>
+    <br>
+    <img src="{{product.imageUrl}}" class="circle responsive-img">
+    <br>
+    <p><b>Reviews :</b></p>
+    <br>
+    <table border=4 cellspacing=4 cellpadding=4>
+        <tr>
+            <td><b>Rating</b></td>
+            <td></td>
+            <td></td>
+            <td><b>Content</b></td>
+        </tr>
+        {{#each product.reviews}}
+        <tr>
+            <td>{{this.rating}}</td>
+            <td></td>
+            <td></td>
+            <td>{{this.content}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

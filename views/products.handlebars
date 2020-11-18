@@ -1,0 +1,25 @@
+<h1>Page number : {{number}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><a href="/products/1">1</a></div>
+        <div class="col-md-2"><a href="/products/2">2</a></div>
+        <div class="col-md-2"><a href="/products/3">3</a></div>
+        <div class="col-md-2"><a href="/products/4">4</a></div>
+        <div class="col-md-2"><a href="/products/5">5</a></div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+<h2>Products list</h2>
+{{#each products}}
+    <div class="card card-body">
+        <h4> <b>Name :</b>  {{productName}}</h4>
+        <p> <b>Category :</b> {{category}}</p>
+        <img src="{{imageUrl}}" class="circle responsive-img" width="370px">
+        <br>
+        <p><b>Average : </b> {{productAverage reviews}}</p>
+        <a href="/product/{{id}}" >More details</a>
+    </div>
+{{else}}
+    <p>No products found</p>
+{{/each}}
